@@ -19,7 +19,7 @@ git submodule update --init --recursive
 
 ```bash
 # Create a volume for your docker container so your project directory will live when your container dies
-docker volume create cse123pa2_data
+docker volume create cse123pa2b_data
 # Build the docker container for the project
 docker build -t cse123pa2b --target linux .
 # Run the docker container for the project. Run this each time you work on the project.
