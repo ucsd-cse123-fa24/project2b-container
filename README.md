@@ -74,10 +74,10 @@ wsl --shutdown
 Ubuntu Shell:
 ```bash
 # Run the docker container again
-docker run -d --rm --privileged -it --name pa2 -v cse123pa2_data:/project-base -t cse123pa2
+docker run -d --rm --privileged -it --name pa2 -v cse123pa2b_data:/project-base -t cse123pa2
 
 # To open a shell inside the running container, in each terminal run the following (or attach to the running container using VSCode):
-docker exec -it pa2 bash
+docker exec -it pa2b bash
 # Inside the container you may need to switch to the /project-base folder
 root@docker$ cd /project-base
 
