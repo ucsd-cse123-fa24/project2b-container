@@ -6,10 +6,11 @@
 
 ```bash
 # Clone with submodules
-git clone --recurse-submodules https://github.com/ucsd-cse123-wi24/project2b-container.git
+git clone --recurse-submodules https://github.com/ucsd-cse123-fa24/project2b-container.git
 
 # Or, clone and update submodules after clone
-git clone https://github.com/ucsd-cse123-wi24/project2b-container.git
+git clone https://github.com/ucsd-cse123-fa24/project2b-container.git
+cd project2b-container/
 git submodule update --init --recursive
 ```
 
@@ -32,9 +33,33 @@ docker exec -it pa2b bash
 # You can now clone the github repo into your project from inside the Docker container's bash shell
 ```
 
-### Windows (You need to use both Ubuntu shell and Powershell)
+### Windows 
+
+#### You need to use both Ubuntu shell and Powershell
+
+This project requres WSL with the Ubuntu distribution.  You can check if you already have that installed by typing;
+```bash
+wsl -l
+```
+
+You should see 
+```bash
+Windows Subsystem for Linux Distributions:
+Ubuntu (Default)
+```
+
+If you see something else, you will need to (re)install WSL with the Ubuntu distribution using the following commands:
+```bash
+wsl --install
+wsl --set-default Ubuntu
+```
 
 Ubuntu Shell:
+
+If you do not already have an Ubuntu shell running, you can start one with:
+```bash
+wsl
+```
 
 #### For Ubuntu Shell user, make sure inside the Docker Desktop -> Settings -> Resource -> WSL Integration, your "ubuntu" button is on.
 ```bash
