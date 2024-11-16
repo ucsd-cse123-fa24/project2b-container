@@ -27,11 +27,6 @@ docker build -t cse123pa2b --target linux .
 # You should be able to attach to the running container in VSCode (or using the exec comand below) after this is executed.
 docker run -d --rm --privileged -it --name pa2b -v /lib/modules:/lib/modules -v cse123pa2b_data:/project-base -t cse123pa2b
 ```
-```bash
-# To open a shell inside the running container, in each terminal run the following:
-docker exec -it pa2b bash
-# You can now clone the github repo into your project from inside the Docker container's bash shell
-```
 
 ### Windows 
 
@@ -100,12 +95,17 @@ Ubuntu Shell:
 ```bash
 # Run the docker container again
 docker run -d --rm --privileged -it --name pa2b -v cse123pa2b_data:/project-base -t cse123pa2b
+```
 
+## Step 3: Clone your project repo inside the container
+
+We recommend using VSCode to do this (so that it uses your standard Git credentials), but you can also do it from the command line inside the docker container:
+
+```bash
 # To open a shell inside the running container, in each terminal run the following (or attach to the running container using VSCode):
-docker exec -it pa2b bash
+docker exec -it pa2 bash
 # Inside the container you may need to switch to the /project-base folder
 root@docker$ cd /project-base
 
 # You can now clone the github repo into your project from inside the Docker container's bash shell and run the rest of the commands!
 ```
-
