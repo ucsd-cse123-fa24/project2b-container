@@ -1,7 +1,7 @@
 FROM ubuntu:18.04 AS linux
 RUN apt update && \
         apt install -y openvswitch-switch mininet iproute2 arping netcat \
-                curl inetutils-ping inetutils-traceroute \
+                curl wget inetutils-ping inetutils-traceroute \
                 build-essential gdb git nano screen python python-pip python-twisted sudo && \
         pip install typing
 RUN apt install -y python3 python3-pip && \
