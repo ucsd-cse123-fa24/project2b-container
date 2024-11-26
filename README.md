@@ -103,7 +103,7 @@ We recommend using VSCode to do this (so that it uses your standard Git credenti
 
 ```bash
 # To open a shell inside the running container, in each terminal run the following (or attach to the running container using VSCode):
-docker exec -it pa2 bash
+docker exec -it pa2b bash
 # Inside the container you may need to switch to the /project-base folder
 root@docker$ cd /project-base
 
